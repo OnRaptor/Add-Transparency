@@ -5,10 +5,10 @@ using namespace std;
 
 int main() {
 	Image img;
-	string dir;
+	string path;
 	cout << "Path to File:";
-	cin >> dir;
-	img.loadFromFile(dir);
+	cin >> path;
+	img.loadFromFile(path);
 	for (int x = 0;x < img.getSize().x;x++) {
 		for (int y = 0;y < img.getSize().y;y++) {
 			if (img.getPixel(x, y) == Color::White) {
@@ -16,8 +16,8 @@ int main() {
 			}
 		}
 	}
-	dir.insert(dir.find('.png') - 3, "(T)");
-	img.saveToFile(dir);
+	path.insert(path.find('.png') - 3, "(T)");
+	img.saveToFile(path);
 	cout << "All done!\n";
 	char v;
 	cin >> v;
