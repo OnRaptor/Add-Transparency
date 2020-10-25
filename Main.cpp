@@ -12,7 +12,8 @@ int main() {
 	for (int x = 0;x < img.getSize().x;x++) {
 		for (int y = 0;y < img.getSize().y;y++) {
 				if (img.getPixel(x, y) == Color::White) {	
-				img.setPixel(x, y, Color::Transparent);			
+				img.setPixel(x, y, Color::Transparent);		
+				}
 			}
 		}
 	}
